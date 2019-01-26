@@ -67,7 +67,7 @@ def do_logic():
 
 def parse_config():
     global CONFIG
-    config = ConfigParser().parse_config("/home/jonas/test.yaml")
+    config = ConfigParser().parse_config("/config.yaml")
     CONFIG = config
 
 def main():
