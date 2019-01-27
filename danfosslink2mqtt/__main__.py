@@ -6,6 +6,7 @@ import json
 from decimal import Decimal
 import urllib
 from .configparser import ConfigParser
+import argparse
 
 CONFIG = {}
 
@@ -67,7 +68,13 @@ def do_logic():
 
 def parse_config():
     global CONFIG
-    config = ConfigParser().parse_config("/config.yaml")
+    
+    parser = argparse.ArgumentParser("DanfossLink2MQTT")
+    parser.add_argument("--config", action = "store", default = "/config.yaml")
+
+    args = parser.parse_args()
+
+    config = ConfigParser().parse_config(args.config)
     CONFIG = config
 
 def main():
