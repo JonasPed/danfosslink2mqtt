@@ -1,7 +1,10 @@
-from .configparser import ConfigParser
 import argparse
-import danfosslink2mqtt.logic as logic
+
 import danfosslink2mqtt.config as config
+import danfosslink2mqtt.logic as logic
+
+from .configparser import ConfigParser
+
 
 def parse_config():
     parser = argparse.ArgumentParser("DanfossLink2MQTT")
@@ -19,4 +22,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

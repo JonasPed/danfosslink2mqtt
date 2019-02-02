@@ -1,5 +1,6 @@
 import yaml
 
+
 class ConfigParser:
     def parse_config(self, config_file):
         print("Parsing config from {}".format(config_file))
@@ -8,4 +9,3 @@ class ConfigParser:
             print(config)
 
             return config
-                                
